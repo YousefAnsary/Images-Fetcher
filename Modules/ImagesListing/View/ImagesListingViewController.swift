@@ -26,7 +26,7 @@ class ImagesListingViewController: UIViewController {
     }
 
     required init?(coder: NSCoder) {
-        fatalError("Use the other init to provide View Model")
+        fatalError("Use the other init to provide presenter")
     }
 
     // MARK: - View Life Cycle
