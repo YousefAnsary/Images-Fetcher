@@ -32,13 +32,17 @@ class ImagesListingViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.register(ImageTableCell.self, forCellReuseIdentifier: "ImageTableCell")
-//        tableView.register(AdTableCell.self, forCellReuseIdentifier: "AdTableCell")
+        self.presenter.attachView(viewDelegate: self)
+        self.presenter.viewDidLoad()
+        self.setupTableView()
     }
 
     // MARK: - Private Functions
     private func setupTableView() {
-        
+        self.tableView.register(ImageTableCell.self, forCellReuseIdentifier: "ImageTableCell")
+        self.tableView.register(AdTableCell.self, forCellReuseIdentifier: "AdTableCell")
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
 }
 
@@ -77,11 +81,11 @@ extension  ImagesListingViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // If it's an AD cell index, return the AD cell
         if self.presenter.shouldDequeueAdCell(atIndexPath: indexPath) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AdCell", for: indexPath) as! AdTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableCell", for: indexPath) as! AdTableCell
             self.presenter.configureCell(cell, indexPath: indexPath)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableCell", for: indexPath) as! ImageTableCell
             self.presenter.configureCell(cell, indexPath: indexPath)
             return cell
         }
