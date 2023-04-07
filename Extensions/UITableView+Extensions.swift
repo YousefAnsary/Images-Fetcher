@@ -10,7 +10,7 @@ import UIKit
 extension UITableView {
 
     func register<T: UITableViewCell>(cellType: T.Type) {
-        self.register(cellName: cellType.className)
+        self.register(cellName: String(describing: cellType))
     }
     
     func register(cellName: String) {
@@ -19,7 +19,7 @@ extension UITableView {
     }
 
     func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T {
-        let cell = self.dequeueReusableCell(withIdentifier: T.className, for: indexPath)
+        let cell = self.dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath)
         return cell as! T
     }
 }

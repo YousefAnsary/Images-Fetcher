@@ -32,7 +32,6 @@ class ImagesListingViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter.attachView(viewDelegate: self)
         self.presenter.viewDidLoad()
         self.setupTableView()
     }
