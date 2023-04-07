@@ -74,7 +74,7 @@ class ImagesListingPresenterImpl: ImagesListingPresenter {
         let function = paginating ? paginator : fetcher
         do {
             let images = try await function()
-            self.items = paginating ? self.items + images : images
+            self.items = images
             await self.reloadTable()
         } catch {
             await self.handleError(error)
