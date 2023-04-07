@@ -39,8 +39,8 @@ class ImagesListingViewController: UIViewController {
 
     // MARK: - Private Functions
     private func setupTableView() {
-        self.tableView.register(ImageTableCell.self, forCellReuseIdentifier: "ImageTableCell")
-        self.tableView.register(AdTableCell.self, forCellReuseIdentifier: "AdTableCell")
+        self.tableView.register(cellType: ImageTableCell.self)
+        self.tableView.register(cellType: AdTableCell.self)
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
@@ -81,11 +81,11 @@ extension  ImagesListingViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // If it's an AD cell index, return the AD cell
         if self.presenter.shouldDequeueAdCell(atIndexPath: indexPath) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableCell", for: indexPath) as! AdTableCell
+            let cell: AdTableCell = tableView.dequeueReusableCell(for: indexPath)
             self.presenter.configureCell(cell, indexPath: indexPath)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableCell", for: indexPath) as! ImageTableCell
+            let cell: ImageTableCell = tableView.dequeueReusableCell(for: indexPath)
             self.presenter.configureCell(cell, indexPath: indexPath)
             return cell
         }
