@@ -93,4 +93,11 @@ extension  ImagesListingViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.presenter.willDisplayItem(atIndexPath: indexPath)
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? ImageTableCell,
+              let image = cell.getImage() else { return }
+        let detailsVC = ImageDetailsSceneConfigurator.configure(image: image)
+        self.present(detailsVC, animated: true)
+    }
 }

@@ -8,7 +8,6 @@
 import Foundation
 
 protocol ImagesListingPresenter {
-    func attachView(viewDelegate: ImagesListingViewDelegate)
     func viewDidLoad()
     func getNumberOfSections() -> Int
     func getNumberOfRows(inSection section: Int) -> Int

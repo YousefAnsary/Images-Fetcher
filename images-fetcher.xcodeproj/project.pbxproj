@@ -40,6 +40,13 @@
 		E8EAD20329E06DD90096BB55 /* MockImageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAD20229E06DD90096BB55 /* MockImageTableCell.swift */; };
 		E8EAD20629E06F540096BB55 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E8EAD20529E06F540096BB55 /* SDWebImage */; };
 		E8EAD20829E06FE80096BB55 /* ImageModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAD20729E06FE80096BB55 /* ImageModel+Extensions.swift */; };
+		E8EAD20A29E077CA0096BB55 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAD20929E077CA0096BB55 /* UIImage+Extensions.swift */; };
+		E8EAD20E29E0B2D80096BB55 /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAD20C29E0B2D80096BB55 /* ImageDetailsViewController.swift */; };
+		E8EAD20F29E0B2D80096BB55 /* ImageDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8EAD20D29E0B2D80096BB55 /* ImageDetailsViewController.xib */; };
+		E8EAD21229E0B33F0096BB55 /* ImageDetailsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAD21129E0B33F0096BB55 /* ImageDetailsViewDelegate.swift */; };
+		E8EAD21529E0B36B0096BB55 /* ImageDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAD21429E0B36B0096BB55 /* ImageDetailsPresenter.swift */; };
+		E8EAD21729E0B3760096BB55 /* ImageDetailsPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAD21629E0B3760096BB55 /* ImageDetailsPresenterImpl.swift */; };
+		E8EAD21929E0B5500096BB55 /* ImageDetailsSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAD21829E0B5500096BB55 /* ImageDetailsSceneConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +94,13 @@
 		E8EAD20029E06DC70096BB55 /* MockAdTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdTableCell.swift; sourceTree = "<group>"; };
 		E8EAD20229E06DD90096BB55 /* MockImageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageTableCell.swift; sourceTree = "<group>"; };
 		E8EAD20729E06FE80096BB55 /* ImageModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageModel+Extensions.swift"; sourceTree = "<group>"; };
+		E8EAD20929E077CA0096BB55 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		E8EAD20C29E0B2D80096BB55 /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
+		E8EAD20D29E0B2D80096BB55 /* ImageDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailsViewController.xib; sourceTree = "<group>"; };
+		E8EAD21129E0B33F0096BB55 /* ImageDetailsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewDelegate.swift; sourceTree = "<group>"; };
+		E8EAD21429E0B36B0096BB55 /* ImageDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsPresenter.swift; sourceTree = "<group>"; };
+		E8EAD21629E0B3760096BB55 /* ImageDetailsPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsPresenterImpl.swift; sourceTree = "<group>"; };
+		E8EAD21829E0B5500096BB55 /* ImageDetailsSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsSceneConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				E8EAD1BD29E041280096BB55 /* ImagesListing */,
+				E8EAD20B29E077F40096BB55 /* ImageDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -278,6 +293,7 @@
 			children = (
 				E8EAD1F029E064180096BB55 /* UITableView+Extensions.swift */,
 				E8EAD1F629E069410096BB55 /* UIImageView+Extensions.swift */,
+				E8EAD20929E077CA0096BB55 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +315,35 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8EAD20B29E077F40096BB55 /* ImageDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E8EAD21029E0B32F0096BB55 /* View */,
+				E8EAD21329E0B3580096BB55 /* Presenter */,
+				E8EAD21829E0B5500096BB55 /* ImageDetailsSceneConfigurator.swift */,
+			);
+			path = ImageDetails;
+			sourceTree = "<group>";
+		};
+		E8EAD21029E0B32F0096BB55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8EAD20D29E0B2D80096BB55 /* ImageDetailsViewController.xib */,
+				E8EAD20C29E0B2D80096BB55 /* ImageDetailsViewController.swift */,
+				E8EAD21129E0B33F0096BB55 /* ImageDetailsViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8EAD21329E0B3580096BB55 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E8EAD21429E0B36B0096BB55 /* ImageDetailsPresenter.swift */,
+				E8EAD21629E0B3760096BB55 /* ImageDetailsPresenterImpl.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +439,7 @@
 				E8EAD19829E0403D0096BB55 /* Preview Assets.xcassets in Resources */,
 				E8EAD1CE29E048B80096BB55 /* AdTableCell.xib in Resources */,
 				E8EAD19429E0403D0096BB55 /* Assets.xcassets in Resources */,
+				E8EAD20F29E0B2D80096BB55 /* ImageDetailsViewController.xib in Resources */,
 				E8EAD1D429E048E00096BB55 /* ImageTableCell.xib in Resources */,
 				E8EAD1C129E0414C0096BB55 /* ImagesListingViewController.xib in Resources */,
 			);
@@ -416,10 +462,14 @@
 				E8EAD1D829E049080096BB55 /* AdTableCellProtocol.swift in Sources */,
 				E8EAD1DC29E0538F0096BB55 /* ImageModel.swift in Sources */,
 				E8EAD1E729E05B130096BB55 /* ImagesGateway.swift in Sources */,
+				E8EAD20A29E077CA0096BB55 /* UIImage+Extensions.swift in Sources */,
 				E8EAD1BB29E040B20096BB55 /* AppDelegate.swift in Sources */,
 				E8EAD1C429E043600096BB55 /* ImagesListingViewDelegate.swift in Sources */,
+				E8EAD21929E0B5500096BB55 /* ImageDetailsSceneConfigurator.swift in Sources */,
 				E8EAD1C029E0414C0096BB55 /* ImagesListingViewController.swift in Sources */,
+				E8EAD21529E0B36B0096BB55 /* ImageDetailsPresenter.swift in Sources */,
 				E8EAD1DF29E0543F0096BB55 /* APIClient.swift in Sources */,
+				E8EAD21229E0B33F0096BB55 /* ImageDetailsViewDelegate.swift in Sources */,
 				E8EAD1C729E044130096BB55 /* ImagesListingPresenter.swift in Sources */,
 				E8EAD1EE29E05DDC0096BB55 /* ImagesUseCase.swift in Sources */,
 				E8EAD1F129E064190096BB55 /* UITableView+Extensions.swift in Sources */,
@@ -428,10 +478,12 @@
 				E8EAD1D629E048F20096BB55 /* ImageTableCellProtocol.swift in Sources */,
 				E8EAD1E429E05AF20096BB55 /* APIClientImpl.swift in Sources */,
 				E8EAD1F729E069410096BB55 /* UIImageView+Extensions.swift in Sources */,
+				E8EAD21729E0B3760096BB55 /* ImageDetailsPresenterImpl.swift in Sources */,
 				E8EAD1EB29E05CA10096BB55 /* FailedRequest.swift in Sources */,
 				E8EAD1F329E0658F0096BB55 /* ImagesListingSceneConfigurator.swift in Sources */,
 				E8EAD1C929E044790096BB55 /* ImagesListingPresenterImpl.swift in Sources */,
 				E8EAD1D329E048E00096BB55 /* ImageTableCell.swift in Sources */,
+				E8EAD20E29E0B2D80096BB55 /* ImageDetailsViewController.swift in Sources */,
 				E8EAD1CD29E048B80096BB55 /* AdTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

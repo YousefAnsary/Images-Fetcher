@@ -21,4 +21,8 @@ class ImageTableCell: UITableViewCell, ImageTableCellProtocol {
         self.loadedImageView.loadImage(fromURL: imageURL)
         self.authorNameLabel.text = authorName
     }
+
+    func getImage() -> UIImage? {
+        return self.loadedImageView.image
+    }
 }
