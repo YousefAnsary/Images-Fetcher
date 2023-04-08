@@ -11,7 +11,10 @@ class ImagesListingSceneConfigurator {
 
     static func configure() -> ImagesListingViewController {
         let presenter = ImagesListingPresenterImpl()
-        let vc = ImagesListingViewController(presenter: presenter)
+        let router = ImagesListingRouterImpl()
+        let vc = ImagesListingViewController(presenter: presenter,
+                                             router: router)
+        router.attachController(vc)
         presenter.attachView(viewDelegate: vc)
         return vc
     }

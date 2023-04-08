@@ -13,20 +13,26 @@ class ImagesListingViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     //
     private let presenter: ImagesListingPresenter
+    private let router: ImagesListingRouter
 
     // MARK: - Initializers
-    init(presenter: ImagesListingPresenter) {
+    init(presenter: ImagesListingPresenter,
+         router: ImagesListingRouter) {
         self.presenter = presenter
+        self.router = router
         super.init(nibName: "ImagesListingViewController", bundle: nil)
     }
 
-    required init?(presenter: ImagesListingPresenter, coder: NSCoder) {
+    required init?(presenter: ImagesListingPresenter,
+                   router: ImagesListingRouter,
+                   coder: NSCoder) {
         self.presenter = presenter
+        self.router = router
         super.init(coder: coder)
     }
 
     required init?(coder: NSCoder) {
-        fatalError("Use the other init to provide presenter")
+        fatalError("Use the other init to provide presenter & router")
     }
 
     // MARK: - View Life Cycle
@@ -97,7 +103,6 @@ extension  ImagesListingViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? ImageTableCell,
               let image = cell.getImage() else { return }
-        let detailsVC = ImageDetailsSceneConfigurator.configure(image: image)
-        self.present(detailsVC, animated: true)
+        self.router.presentImageDetails(image: image)
     }
 }
