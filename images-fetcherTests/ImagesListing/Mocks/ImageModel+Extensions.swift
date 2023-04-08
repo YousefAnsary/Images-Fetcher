@@ -16,4 +16,13 @@ extension ImageModel {
                   url: "url",
                   downloadURL: downloadURL)
     }
+    
+    init(id: String) {
+        self.init(id: id,
+                  author: "author",
+                  width: 0,
+                  height: 0,
+                  url: "url",
+                  downloadURL: "downloadURL")
+    }
 }
