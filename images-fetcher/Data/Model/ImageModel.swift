@@ -5,7 +5,7 @@
 //  Created by Youssef on 07/04/2023.
 //
 
-struct ImageModel: Decodable {
+struct ImageModel: Codable {
 
     let id: String
     let author: String

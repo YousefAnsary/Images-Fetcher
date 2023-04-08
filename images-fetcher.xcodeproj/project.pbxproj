@@ -11,6 +11,8 @@
 		E8ACE71029E19958003D86C2 /* MockImageDetailsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACE70F29E19958003D86C2 /* MockImageDetailsViewDelegate.swift */; };
 		E8ACE71229E19CFF003D86C2 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACE71129E19CFF003D86C2 /* UIImage+Extensions.swift */; };
 		E8ACE71529E19D9D003D86C2 /* ImagesListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACE71429E19D9D003D86C2 /* ImagesListingRouter.swift */; };
+		E8ACE71829E1A3BE003D86C2 /* ImagesLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACE71729E1A3BE003D86C2 /* ImagesLocalDataSource.swift */; };
+		E8ACE71F29E1A571003D86C2 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ACE71E29E1A571003D86C2 /* FileManager.m */; };
 		E8EAD19429E0403D0096BB55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8EAD19329E0403D0096BB55 /* Assets.xcassets */; };
 		E8EAD19829E0403D0096BB55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8EAD19729E0403D0096BB55 /* Preview Assets.xcassets */; };
 		E8EAD1A229E0403E0096BB55 /* ImagesListingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAD1A129E0403E0096BB55 /* ImagesListingPresenterTests.swift */; };
@@ -68,6 +70,9 @@
 		E8ACE70F29E19958003D86C2 /* MockImageDetailsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageDetailsViewDelegate.swift; sourceTree = "<group>"; };
 		E8ACE71129E19CFF003D86C2 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		E8ACE71429E19D9D003D86C2 /* ImagesListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListingRouter.swift; sourceTree = "<group>"; };
+		E8ACE71729E1A3BE003D86C2 /* ImagesLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesLocalDataSource.swift; sourceTree = "<group>"; };
+		E8ACE71E29E1A571003D86C2 /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		E8ACE72029E1A5BD003D86C2 /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		E8EAD18C29E0403C0096BB55 /* images-fetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "images-fetcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EAD19329E0403D0096BB55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8EAD19529E0403D0096BB55 /* images_fetcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = images_fetcher.entitlements; sourceTree = "<group>"; };
@@ -164,6 +169,23 @@
 				E8ACE71429E19D9D003D86C2 /* ImagesListingRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		E8ACE71629E1A3A3003D86C2 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACE71729E1A3BE003D86C2 /* ImagesLocalDataSource.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		E8ACE71929E1A3C7003D86C2 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACE72029E1A5BD003D86C2 /* FileManager.h */,
+				E8ACE71E29E1A571003D86C2 /* FileManager.m */,
+			);
+			path = FileManager;
 			sourceTree = "<group>";
 		};
 		E8EAD18329E0403C0096BB55 = {
@@ -281,6 +303,8 @@
 		E8EAD1D929E0536D0096BB55 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E8ACE71629E1A3A3003D86C2 /* Local */,
+				E8ACE71929E1A3C7003D86C2 /* FileManager */,
 				E8EAD1E529E05B020096BB55 /* Gateways */,
 				E8EAD1DD29E054230096BB55 /* Network */,
 				E8EAD1DA29E053780096BB55 /* Model */,
@@ -446,6 +470,7 @@
 				TargetAttributes = {
 					E8EAD18B29E0403C0096BB55 = {
 						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
 					};
 					E8EAD19C29E0403E0096BB55 = {
 						CreatedOnToolsVersion = 14.0;
@@ -507,6 +532,7 @@
 				E8EAD1DC29E0538F0096BB55 /* ImageModel.swift in Sources */,
 				E8EAD1E729E05B130096BB55 /* ImagesGateway.swift in Sources */,
 				E8EAD20A29E077CA0096BB55 /* UIImage+Extensions.swift in Sources */,
+				E8ACE71F29E1A571003D86C2 /* FileManager.m in Sources */,
 				E8EAD1BB29E040B20096BB55 /* AppDelegate.swift in Sources */,
 				E8EAD1C429E043600096BB55 /* ImagesListingViewDelegate.swift in Sources */,
 				E8EAD21929E0B5500096BB55 /* ImageDetailsSceneConfigurator.swift in Sources */,
@@ -530,6 +556,7 @@
 				E8EAD1D329E048E00096BB55 /* ImageTableCell.swift in Sources */,
 				E8EAD20E29E0B2D80096BB55 /* ImageDetailsViewController.swift in Sources */,
 				E8EAD1CD29E048B80096BB55 /* AdTableCell.swift in Sources */,
+				E8ACE71829E1A3BE003D86C2 /* ImagesLocalDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +701,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "images-fetcher/images_fetcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -703,6 +731,8 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "images-fetcher/Data/FileManager/FileManager.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -713,6 +743,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "images-fetcher/images_fetcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -742,6 +773,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "images-fetcher/Data/FileManager/FileManager.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
