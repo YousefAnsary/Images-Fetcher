@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8ACE70D29E1991E003D86C2 /* ImageDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACE70C29E1991E003D86C2 /* ImageDetailsPresenterTests.swift */; };
+		E8ACE71029E19958003D86C2 /* MockImageDetailsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACE70F29E19958003D86C2 /* MockImageDetailsViewDelegate.swift */; };
+		E8ACE71229E19CFF003D86C2 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACE71129E19CFF003D86C2 /* UIImage+Extensions.swift */; };
 		E8EAD19429E0403D0096BB55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8EAD19329E0403D0096BB55 /* Assets.xcassets */; };
 		E8EAD19829E0403D0096BB55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8EAD19729E0403D0096BB55 /* Preview Assets.xcassets */; };
 		E8EAD1A229E0403E0096BB55 /* ImagesListingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAD1A129E0403E0096BB55 /* ImagesListingPresenterTests.swift */; };
@@ -60,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E8ACE70C29E1991E003D86C2 /* ImageDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		E8ACE70F29E19958003D86C2 /* MockImageDetailsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageDetailsViewDelegate.swift; sourceTree = "<group>"; };
+		E8ACE71129E19CFF003D86C2 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		E8EAD18C29E0403C0096BB55 /* images-fetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "images-fetcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EAD19329E0403D0096BB55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8EAD19529E0403D0096BB55 /* images_fetcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = images_fetcher.entitlements; sourceTree = "<group>"; };
@@ -123,6 +129,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8ACE70A29E198FB003D86C2 /* ImagesListing */ = {
+			isa = PBXGroup;
+			children = (
+				E8EAD1FB29E06CCC0096BB55 /* Mocks */,
+				E8EAD1A129E0403E0096BB55 /* ImagesListingPresenterTests.swift */,
+			);
+			path = ImagesListing;
+			sourceTree = "<group>";
+		};
+		E8ACE70B29E1990F003D86C2 /* ImageDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACE70E29E1994D003D86C2 /* Mocks */,
+				E8ACE70C29E1991E003D86C2 /* ImageDetailsPresenterTests.swift */,
+			);
+			path = ImageDetails;
+			sourceTree = "<group>";
+		};
+		E8ACE70E29E1994D003D86C2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACE70F29E19958003D86C2 /* MockImageDetailsViewDelegate.swift */,
+				E8ACE71129E19CFF003D86C2 /* UIImage+Extensions.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		E8EAD18329E0403C0096BB55 = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +201,8 @@
 		E8EAD1A029E0403E0096BB55 /* images-fetcherTests */ = {
 			isa = PBXGroup;
 			children = (
-				E8EAD1FB29E06CCC0096BB55 /* Mocks */,
-				E8EAD1A129E0403E0096BB55 /* ImagesListingPresenterTests.swift */,
+				E8ACE70A29E198FB003D86C2 /* ImagesListing */,
+				E8ACE70B29E1990F003D86C2 /* ImageDetails */,
 			);
 			path = "images-fetcherTests";
 			sourceTree = "<group>";
@@ -496,7 +529,10 @@
 				E8EAD20829E06FE80096BB55 /* ImageModel+Extensions.swift in Sources */,
 				E8EAD1FF29E06CFE0096BB55 /* MockImagesUseCase.swift in Sources */,
 				E8EAD20329E06DD90096BB55 /* MockImageTableCell.swift in Sources */,
+				E8ACE70D29E1991E003D86C2 /* ImageDetailsPresenterTests.swift in Sources */,
 				E8EAD1A229E0403E0096BB55 /* ImagesListingPresenterTests.swift in Sources */,
+				E8ACE71229E19CFF003D86C2 /* UIImage+Extensions.swift in Sources */,
+				E8ACE71029E19958003D86C2 /* MockImageDetailsViewDelegate.swift in Sources */,
 				E8EAD20129E06DC70096BB55 /* MockAdTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
